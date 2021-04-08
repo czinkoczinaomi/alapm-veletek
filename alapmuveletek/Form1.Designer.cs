@@ -47,11 +47,16 @@
             // cbMuveletek
             // 
             this.cbMuveletek.FormattingEnabled = true;
+            this.cbMuveletek.Items.AddRange(new object[] {
+            "+",
+            "-",
+            "/",
+            "*"});
             this.cbMuveletek.Location = new System.Drawing.Point(12, 44);
             this.cbMuveletek.Name = "cbMuveletek";
             this.cbMuveletek.Size = new System.Drawing.Size(121, 21);
             this.cbMuveletek.TabIndex = 0;
-            this.cbMuveletek.Text = "+";
+            this.cbMuveletek.SelectedIndexChanged += new System.EventHandler(this.CbMuveletek_SelectedIndexChanged);
             // 
             // txtValasz
             // 
@@ -59,6 +64,7 @@
             this.txtValasz.Name = "txtValasz";
             this.txtValasz.Size = new System.Drawing.Size(100, 20);
             this.txtValasz.TabIndex = 1;
+            this.txtValasz.TextChanged += new System.EventHandler(this.TxtValasz_TextChanged);
             // 
             // lbMuvelet
             // 
@@ -95,6 +101,7 @@
             this.btnMegoldas.TabIndex = 5;
             this.btnMegoldas.Text = "Megoldást mutat";
             this.btnMegoldas.UseVisualStyleBackColor = true;
+            this.btnMegoldas.Click += new System.EventHandler(this.BtnMegoldas_Click);
             // 
             // lbMegoldas
             // 

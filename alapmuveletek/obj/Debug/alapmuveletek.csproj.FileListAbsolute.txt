@@ -1,0 +1,10 @@
+D:\C#\alapmuveletek\alapmuveletek\bin\Debug\alapmuveletek.exe.config
+D:\C#\alapmuveletek\alapmuveletek\bin\Debug\alapmuveletek.exe
+D:\C#\alapmuveletek\alapmuveletek\bin\Debug\alapmuveletek.pdb
+D:\C#\alapmuveletek\alapmuveletek\obj\Debug\alapmuveletek.csprojAssemblyReference.cache
+D:\C#\alapmuveletek\alapmuveletek\obj\Debug\alapmuveletek.Form1.resources
+D:\C#\alapmuveletek\alapmuveletek\obj\Debug\alapmuveletek.Properties.Resources.resources
+D:\C#\alapmuveletek\alapmuveletek\obj\Debug\alapmuveletek.csproj.GenerateResource.cache
+D:\C#\alapmuveletek\alapmuveletek\obj\Debug\alapmuveletek.csproj.CoreCompileInputs.cache
+D:\C#\alapmuveletek\alapmuveletek\obj\Debug\alapmuveletek.exe
+D:\C#\alapmuveletek\alapmuveletek\obj\Debug\alapmuveletek.pdb
