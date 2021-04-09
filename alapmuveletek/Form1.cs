@@ -15,6 +15,8 @@ namespace alapmuveletek
         private int megoldas;
         private int probalkozasokSzama;
         private int kerdesekSzama;
+        private int egyik;
+        private int masik;
         public Form1()
         {
             InitializeComponent();
@@ -29,9 +31,8 @@ namespace alapmuveletek
 
         private void TxtValasz_TextChanged(object sender, EventArgs e)
         {
-                probalkozasokSzama++;
-           
-
+ 
+            probalkozasokSzama++;
             if (txtValasz.Text.Equals(megoldas.ToString()))
             {
                 lbHelyesHelytelen.Text= "Az eredmény: helyes";
@@ -42,6 +43,7 @@ namespace alapmuveletek
             lbProbalkozas.Text = "Próbálkozások száma: " + probalkozasokSzama;
 
         }
+  
 
         private void BtnMegoldas_Click(object sender, EventArgs e)
         {
@@ -60,10 +62,23 @@ namespace alapmuveletek
         private void CmsOsztas_Click(object sender, EventArgs e)
         {
             kerdesekSzama++;
-            lbFeladat.Text += "\n 32/4=";
-            megoldas = 32 / 4;
+            osztastGeneral();
+            lbFeladat.Text = "Feladat \n "+ egyik + "/"+ masik + "=";
+
+           megoldas = egyik / masik;
 
             lbHanyKerdes.Text = "Kerdések száma: " + kerdesekSzama;
+        }
+        private void osztastGeneral() {
+            Random r = new Random();
+            
+            do
+            {
+
+                egyik = r.Next(1, 100);
+                masik = r.Next(1, 100);
+
+            } while (egyik % masik != 0);
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
