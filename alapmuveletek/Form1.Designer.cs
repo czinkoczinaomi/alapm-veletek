@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbMuveletek = new System.Windows.Forms.ComboBox();
+            this.components = new System.ComponentModel.Container();
             this.txtValasz = new System.Windows.Forms.TextBox();
-            this.lbMuvelet = new System.Windows.Forms.Label();
             this.lbFeladat = new System.Windows.Forms.Label();
             this.btnUjraprobal = new System.Windows.Forms.Button();
             this.btnMegoldas = new System.Windows.Forms.Button();
@@ -41,22 +40,17 @@
             this.lbEredmenySz = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbEredmenyelMuv = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.műveletekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsSzorzas = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsOsztas = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsOsszeadas = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsKivonas = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnStatisztika = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cbMuveletek
-            // 
-            this.cbMuveletek.FormattingEnabled = true;
-            this.cbMuveletek.Items.AddRange(new object[] {
-            "+",
-            "-",
-            "/",
-            "*"});
-            this.cbMuveletek.Location = new System.Drawing.Point(12, 44);
-            this.cbMuveletek.Name = "cbMuveletek";
-            this.cbMuveletek.Size = new System.Drawing.Size(121, 21);
-            this.cbMuveletek.TabIndex = 0;
-            this.cbMuveletek.SelectedIndexChanged += new System.EventHandler(this.CbMuveletek_SelectedIndexChanged);
             // 
             // txtValasz
             // 
@@ -65,15 +59,6 @@
             this.txtValasz.Size = new System.Drawing.Size(100, 20);
             this.txtValasz.TabIndex = 1;
             this.txtValasz.TextChanged += new System.EventHandler(this.TxtValasz_TextChanged);
-            // 
-            // lbMuvelet
-            // 
-            this.lbMuvelet.AutoSize = true;
-            this.lbMuvelet.Location = new System.Drawing.Point(9, 28);
-            this.lbMuvelet.Name = "lbMuvelet";
-            this.lbMuvelet.Size = new System.Drawing.Size(45, 13);
-            this.lbMuvelet.TabIndex = 2;
-            this.lbMuvelet.Text = "Művelet";
             // 
             // lbFeladat
             // 
@@ -155,6 +140,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // lbEredmenyelMuv
             // 
@@ -164,6 +150,66 @@
             this.lbEredmenyelMuv.Size = new System.Drawing.Size(171, 13);
             this.lbEredmenyelMuv.TabIndex = 12;
             this.lbEredmenyelMuv.Text = "Eredmények műveletekre lebontva";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.műveletekToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(585, 24);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // műveletekToolStripMenuItem
+            // 
+            this.műveletekToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsSzorzas,
+            this.cmsOsztas,
+            this.cmsOsszeadas,
+            this.cmsKivonas});
+            this.műveletekToolStripMenuItem.Name = "műveletekToolStripMenuItem";
+            this.műveletekToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.műveletekToolStripMenuItem.Text = "Műveletek";
+            // 
+            // cmsSzorzas
+            // 
+            this.cmsSzorzas.Name = "cmsSzorzas";
+            this.cmsSzorzas.Size = new System.Drawing.Size(180, 22);
+            this.cmsSzorzas.Text = "szorzás";
+            this.cmsSzorzas.Click += new System.EventHandler(this.CmsSzorzas_Click);
+            // 
+            // cmsOsztas
+            // 
+            this.cmsOsztas.Name = "cmsOsztas";
+            this.cmsOsztas.Size = new System.Drawing.Size(180, 22);
+            this.cmsOsztas.Text = "osztás";
+            this.cmsOsztas.Click += new System.EventHandler(this.CmsOsztas_Click);
+            // 
+            // cmsOsszeadas
+            // 
+            this.cmsOsszeadas.Name = "cmsOsszeadas";
+            this.cmsOsszeadas.Size = new System.Drawing.Size(180, 22);
+            this.cmsOsszeadas.Text = "összeadás";
+            // 
+            // cmsKivonas
+            // 
+            this.cmsKivonas.Name = "cmsKivonas";
+            this.cmsKivonas.Size = new System.Drawing.Size(180, 22);
+            this.cmsKivonas.Text = "kivonás";
+            // 
+            // pnStatisztika
+            // 
+            this.pnStatisztika.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnStatisztika.Location = new System.Drawing.Point(12, 256);
+            this.pnStatisztika.Name = "pnStatisztika";
+            this.pnStatisztika.Size = new System.Drawing.Size(278, 182);
+            this.pnStatisztika.TabIndex = 15;
             // 
             // Form1
             // 
@@ -180,22 +226,22 @@
             this.Controls.Add(this.btnMegoldas);
             this.Controls.Add(this.btnUjraprobal);
             this.Controls.Add(this.lbFeladat);
-            this.Controls.Add(this.lbMuvelet);
             this.Controls.Add(this.txtValasz);
-            this.Controls.Add(this.cbMuveletek);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pnStatisztika);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Alapműveletek";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbMuveletek;
         private System.Windows.Forms.TextBox txtValasz;
-        private System.Windows.Forms.Label lbMuvelet;
         private System.Windows.Forms.Label lbFeladat;
         private System.Windows.Forms.Button btnUjraprobal;
         private System.Windows.Forms.Button btnMegoldas;
@@ -206,6 +252,14 @@
         private System.Windows.Forms.Label lbEredmenySz;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lbEredmenyelMuv;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem műveletekToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cmsSzorzas;
+        private System.Windows.Forms.ToolStripMenuItem cmsOsztas;
+        private System.Windows.Forms.ToolStripMenuItem cmsOsszeadas;
+        private System.Windows.Forms.ToolStripMenuItem cmsKivonas;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Panel pnStatisztika;
     }
 }
 
